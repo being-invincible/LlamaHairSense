@@ -27,16 +27,16 @@ def model(text, mess):
         MODEL_ID = 'llama2-13b-chat'
         MODEL_VERSION_ID = '79a1af31aa8249a99602fc05687e8f40'
         clarifai_llm = Clarifai(
-            pat=CLARIFAI_PAT, user_id=USER_ID, app_id=APP_ID, model_id=MODEL_ID
+            pat=CLARIFAI_PAT, user_id=USER_ID, app_id=APP_ID, model_id=MODEL_ID, model_version_id=MODEL_VERSION_ID
         )
 
         # Create LLM chain
-        template = """Recommend a curated hair-care routine for this hair type: {question}\n The user washes thier hair {times} a week"""
-        prompt_template = PromptTemplate(template=template, input_variables=["question","times"])
+        template = """What is the good hait routine for {question} hair? Write it compactly"""
+        prompt_template = PromptTemplate(template=template, input_variables=["question"])
         llm_chain = LLMChain(prompt=prompt_template, llm=clarifai_llm)
 
         # Get the assistant's response
-        response = llm_chain.run(question=text, times=mess)
+        response = llm_chain.run(question=text)
         print(response)
     return response
 
@@ -64,7 +64,7 @@ if __name__ == "__main__":
                 hairType, score = get_best_hair_type(image, USER_ID, PAT, APP_ID, WORKFLOW_ID)
                 st.write("Based on the visual characteristics, it appears that your hair has a", hairType, "texture.")
                 # Ask user to input a message
-                user_message = st.text_input("How often do you wash your hair in a week?")
+                user_message = 1
                 # Check if user provided a message
                 if user_message:
                     # Call the model function
