@@ -1,5 +1,8 @@
 # Llama HairSense: Your AI-powered hair care companion
- Elevate your hair care journey with HairSense: a transformative project uniting Clarifai's advanced vision AI and Llama 2's perceptive prowess. Effortlessly decipher your hair's distinct nature through imagery, unlocking custom-tailored solutions that redefine hair care precision.
+
+![Llama Hair Sense](https://github.com/being-invincible/LlamaHairSense/assets/86947956/5e169b1d-3615-4564-a2d1-f66a769c16a3)
+
+Elevate your hair care journey with HairSense: a transformative project uniting Clarifai's advanced vision AI and Llama 2's perceptive prowess. Effortlessly decipher your hair's distinct nature through imagery, unlocking custom-tailored solutions that redefine hair care precision.
 
 Hair care can be complex and time-consuming. Many people struggle to accurately determine their hair type, texture, and suitable care routine, leading to ineffective hair care practices and unhealthy hair.
 
